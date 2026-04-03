@@ -10,6 +10,8 @@ The SSH key pair is generated locally by `tls.tf`, following the same pattern us
 
 ## Architecture Overview
 
+<img src="02_hub_spoke_with_routing_architecture.png" width="900"/>
+
 This deployment creates:
 
 - A Resource Group
