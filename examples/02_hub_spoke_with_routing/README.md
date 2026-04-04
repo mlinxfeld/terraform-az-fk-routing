@@ -6,7 +6,7 @@ The Hub contains a **Linux router VM** built with `terraform-az-fk-compute`, and
 
 To make testing possible, the example also deploys **one Linux VM in Spoke1** and **one Linux VM in Spoke2**.
 
-The SSH key pair is generated locally by `tls.tf`, following the same pattern used in [terraform-az-fk-compute](https://github.com/mlinxfeld/terraform-az-fk-compute/examples/01_single_vm/tls.tf).
+The SSH key pair is generated locally by `tls.tf`, following the same pattern used in [terraform-az-fk-compute](https://github.com/mlinxfeld/terraform-az-fk-compute/blob/main/examples/01_single_vm/tls.tf).
 
 ## Architecture Overview
 
