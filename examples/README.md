@@ -14,6 +14,7 @@ These examples are part of the **[FoggyKitchen.com training ecosystem](https://f
 | 01 | **Basic UDR** | Route table, custom route, subnet association |
 | 02 | **Hub-and-Spoke with Router VM** | Transit routing, UDR, VNet peering, router VM, NSG |
 | 03 | **Forced Tunneling via Hub Router VM** | Default route `0.0.0.0/0`, NAT, centralized outbound egress |
+| 04 | **Dual-NIC NVA in Hub** | Multi-NIC router VM, inside/outside split, transit routing, forced tunneling |
 
 Each example builds on the **concepts** introduced in the previous one, but can be applied independently for learning and experimentation.
 
@@ -36,9 +37,9 @@ tofu apply
 ```
 
 You can apply examples independently, but the **recommended approach is sequential**:
-01 → 02 → 03
+01 → 02 → 03 → 04
 
-This mirrors real-world routing design, where custom routes are introduced first, then transit routing, and finally centralized outbound egress through forced tunneling.
+This mirrors real-world routing design, where custom routes are introduced first, then transit routing, then centralized outbound egress through forced tunneling, and finally a more realistic dual-NIC NVA-style topology.
 
 ---
 

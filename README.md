@@ -1,6 +1,6 @@
 # terraform-az-fk-routing
 
-This repository contains a reusable **Terraform / OpenTofu module** and progressive examples for deploying **Azure routing resources** — starting from a simple User Defined Route (UDR) and evolving toward hub-and-spoke transit routing and forced tunneling patterns.
+This repository contains a reusable **Terraform / OpenTofu module** and progressive examples for deploying **Azure routing resources** — starting from a simple User Defined Route (UDR) and evolving toward hub-and-spoke transit routing, forced tunneling, and dual-NIC NVA patterns.
 
 It is part of the **[FoggyKitchen.com training ecosystem](https://foggykitchen.com/courses/azure-fundamentals-terraform-course/)** and is designed as a **clean, composable routing layer** that builds on top of an existing Azure networking foundation (VNets, subnets, peering, and optional router appliances).
 
@@ -37,6 +37,7 @@ Depending on configuration and example used, the module can create:
   - Transit routing through a router VM or NVA
   - Hub-and-spoke network designs
   - Forced tunneling through a centralized egress point
+  - Dual-NIC NVA next-hop patterns
 
 The module intentionally does **not** create:
 - Virtual Networks or subnets
@@ -58,6 +59,7 @@ terraform-az-fk-routing/
 │   ├── 01_basic_udr/
 │   ├── 02_hub_spoke_with_routing/
 │   ├── 03_forced_tunneling/
+│   ├── 04_nva_dual_nic/
 │   └── README.md
 ├── main.tf
 ├── inputs.tf
@@ -163,6 +165,15 @@ module "routing" {
 
 For a working forced tunneling design in Azure, the central router must provide IP forwarding and NAT for outbound traffic.
 
+## Dual-NIC NVA Usage
+
+The module can also be used in a more appliance-like topology, where a router VM exposes:
+
+- an inside NIC used as the `VirtualAppliance` next hop for spoke route tables
+- an outside NIC used for outbound egress and NAT
+
+This keeps Azure route tables simple while allowing a clearer inside/outside separation in the router VM design.
+
 ---
 
 ## ⚙️ Module Inputs
@@ -213,6 +224,7 @@ route_tables = {
 - Route tables should be explicit and easy to reason about
 - Transit routing is only useful when paired with a real forwarding device
 - Forced tunneling is only useful when paired with a real egress device that can perform NAT
+- Dual-NIC NVA topologies can better model real appliances than single-NIC router labs
 - Outputs are first-class citizens for composition with other modules
 
 ---

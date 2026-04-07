@@ -1,0 +1,8 @@
+location             = "westeurope"
+resource_group_name  = "fk-rg"
+router_inside_private_ip  = "10.0.1.4"
+router_outside_private_ip = "10.0.2.4"
+router_vm_size       = "Standard_B1ms"
+spoke_vm_size        = "Standard_B1ms"
+spoke1_vm_private_ip = "10.1.1.4"
+spoke2_vm_private_ip = "10.2.1.4"
