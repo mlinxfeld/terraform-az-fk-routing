@@ -8,6 +8,8 @@ To make validation possible, the example also deploys one Linux VM in each spoke
 
 ## Architecture Overview
 
+![Forced tunneling architecture](./03_forced_tunneling_architecture.png)
+
 This deployment creates:
 
 - A Resource Group
