@@ -11,6 +11,8 @@ This keeps the Azure route tables simple while making the router VM design close
 
 ## Architecture Overview
 
+![Dual-NIC NVA architecture](./04_nva_dual_nic_architecture.png)
+
 This deployment creates:
 
 - A Resource Group
