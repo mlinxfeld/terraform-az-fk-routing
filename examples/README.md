@@ -1,7 +1,7 @@
 # Azure Routing with Terraform/OpenTofu – Training Examples
 
 This directory contains all progressive examples used with the **terraform-az-fk-routing** module.
-The examples are designed as **incremental building blocks**, starting from a simple Azure route table and gradually evolving toward hub-and-spoke transit routing patterns.
+The examples are designed as **incremental building blocks**, starting from a simple Azure route table and gradually evolving toward hub-and-spoke transit routing and forced tunneling patterns.
 
 These examples are part of the **[FoggyKitchen.com training ecosystem](https://foggykitchen.com/courses-2/)** and are used across Azure and multicloud courses covering networking, private connectivity, and architecture fundamentals.
 
@@ -13,6 +13,7 @@ These examples are part of the **[FoggyKitchen.com training ecosystem](https://f
 |:-------:|:------|:-----------|
 | 01 | **Basic UDR** | Route table, custom route, subnet association |
 | 02 | **Hub-and-Spoke with Router VM** | Transit routing, UDR, VNet peering, router VM, NSG |
+| 03 | **Forced Tunneling via Hub Router VM** | Default route `0.0.0.0/0`, NAT, centralized outbound egress |
 
 Each example builds on the **concepts** introduced in the previous one, but can be applied independently for learning and experimentation.
 
@@ -35,9 +36,9 @@ tofu apply
 ```
 
 You can apply examples independently, but the **recommended approach is sequential**:
-01 → 02
+01 → 02 → 03
 
-This mirrors real-world routing design, where custom routes are introduced first and transit routing patterns are added only when required.
+This mirrors real-world routing design, where custom routes are introduced first, then transit routing, and finally centralized outbound egress through forced tunneling.
 
 ---
 

@@ -1,6 +1,6 @@
 # terraform-az-fk-routing
 
-This repository contains a reusable **Terraform / OpenTofu module** and progressive examples for deploying **Azure routing resources** — starting from a simple User Defined Route (UDR) and evolving toward hub-and-spoke transit routing patterns.
+This repository contains a reusable **Terraform / OpenTofu module** and progressive examples for deploying **Azure routing resources** — starting from a simple User Defined Route (UDR) and evolving toward hub-and-spoke transit routing and forced tunneling patterns.
 
 It is part of the **[FoggyKitchen.com training ecosystem](https://foggykitchen.com/courses/azure-fundamentals-terraform-course/)** and is designed as a **clean, composable routing layer** that builds on top of an existing Azure networking foundation (VNets, subnets, peering, and optional router appliances).
 
@@ -17,6 +17,7 @@ The goal of this module is to provide a **clear, educational, and architecture-a
   - VNet peering
   - Router VMs and NVAs
   - Hub-and-spoke network topologies
+  - Centralized outbound egress designs
 
 This is **not** a full landing zone or opinionated platform module.  
 It is a **learning-first, building-block module**.
@@ -35,6 +36,7 @@ Depending on configuration and example used, the module can create:
   - Basic UDR scenarios
   - Transit routing through a router VM or NVA
   - Hub-and-spoke network designs
+  - Forced tunneling through a centralized egress point
 
 The module intentionally does **not** create:
 - Virtual Networks or subnets
@@ -55,6 +57,7 @@ terraform-az-fk-routing/
 ├── examples/
 │   ├── 01_basic_udr/
 │   ├── 02_hub_spoke_with_routing/
+│   ├── 03_forced_tunneling/
 │   └── README.md
 ├── main.tf
 ├── inputs.tf
@@ -127,6 +130,39 @@ module "routing" {
 
 For a working transit-routing design in Azure, `next_hop_ip` must point to a real forwarding device such as a router VM, NVA, or Azure Firewall.
 
+## Forced Tunneling Usage
+
+The module can also be used to force outbound Internet traffic from spoke subnets through a centralized router in the hub:
+
+```hcl
+module "routing" {
+  source = "git::https://github.com/mlinxfeld/terraform-az-fk-routing.git"
+
+  resource_group_name = "fk-rg"
+
+  route_tables = {
+    rt-spoke1 = {
+      location = "westeurope"
+
+      routes = [
+        {
+          name           = "default-to-internet-via-hub"
+          address_prefix = "0.0.0.0/0"
+          next_hop_type  = "VirtualAppliance"
+          next_hop_ip    = "10.0.1.4"
+        }
+      ]
+
+      subnet_ids = [
+        module.vnet_spoke1.subnet_ids["fk-subnet-spoke1"]
+      ]
+    }
+  }
+}
+```
+
+For a working forced tunneling design in Azure, the central router must provide IP forwarding and NAT for outbound traffic.
+
 ---
 
 ## ⚙️ Module Inputs
@@ -176,6 +212,7 @@ route_tables = {
 - Routing is a **dedicated concern**, separate from networking, security, and compute
 - Route tables should be explicit and easy to reason about
 - Transit routing is only useful when paired with a real forwarding device
+- Forced tunneling is only useful when paired with a real egress device that can perform NAT
 - Outputs are first-class citizens for composition with other modules
 
 ---
