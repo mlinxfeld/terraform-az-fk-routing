@@ -6,6 +6,10 @@ This example reuses the same architectural building blocks as **Example 02**, bu
 
 To make validation possible, the example also deploys one Linux VM in each spoke.
 
+## Related Article
+
+- [Azure Forced Tunneling with Terraform](https://foggykitchen.com/2026/04/09/azure-forced-tunneling-terraform/)
+
 ## Architecture Overview
 
 ![Forced tunneling architecture](./03_forced_tunneling_architecture.png)

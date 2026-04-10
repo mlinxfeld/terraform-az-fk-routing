@@ -12,9 +12,9 @@ These examples are part of the **[FoggyKitchen.com training ecosystem](https://f
 | Example | Title | Key Topics |
 |:-------:|:------|:-----------|
 | 01 | **Basic UDR** | Route table, custom route, subnet association |
-| 02 | **Hub-and-Spoke with Router VM** | Transit routing, UDR, VNet peering, router VM, NSG |
-| 03 | **Forced Tunneling via Hub Router VM** | Default route `0.0.0.0/0`, NAT, centralized outbound egress |
-| 04 | **Dual-NIC NVA in Hub** | Multi-NIC router VM, inside/outside split, transit routing, forced tunneling |
+| 02 | **Hub-and-Spoke with Router VM** | Transit routing, UDR, VNet peering, router VM, NSG, [Blog Post](https://foggykitchen.com/2026/04/07/azure-hub-spoke-routing-terraform/) |
+| 03 | **Forced Tunneling via Hub Router VM** | Default route `0.0.0.0/0`, NAT, centralized outbound egress, [Blog Post](https://foggykitchen.com/2026/04/09/azure-forced-tunneling-terraform/) |
+| 04 | **Dual-NIC NVA in Hub** | Multi-NIC router VM, inside/outside split, transit routing, forced tunneling, [Blog Post](https://foggykitchen.com/2026/04/10/azure-network-segmentation-terraform/) |
 
 Each example builds on the **concepts** introduced in the previous one, but can be applied independently for learning and experimentation.
 
@@ -60,6 +60,9 @@ These examples intentionally avoid:
 ## 🧩 Related Resources
 
 - [FoggyKitchen Azure Routing Module (terraform-az-fk-routing)](../)
+- [Azure Hub-Spoke Routing with Terraform](https://foggykitchen.com/2026/04/07/azure-hub-spoke-routing-terraform/)
+- [Azure Forced Tunneling with Terraform](https://foggykitchen.com/2026/04/09/azure-forced-tunneling-terraform/)
+- [Azure Network Segmentation with Terraform](https://foggykitchen.com/2026/04/10/azure-network-segmentation-terraform/)
 - [FoggyKitchen Azure VNet Module (terraform-az-fk-vnet)](https://github.com/mlinxfeld/terraform-az-fk-vnet)
 - [FoggyKitchen Azure VNet Peering Module (terraform-az-fk-vnet-peering)](https://github.com/mlinxfeld/terraform-az-fk-vnet-peering)
 - [FoggyKitchen Azure NSG Module (terraform-az-fk-nsg)](https://github.com/mlinxfeld/terraform-az-fk-nsg)

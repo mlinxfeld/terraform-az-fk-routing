@@ -9,6 +9,10 @@ This is a more realistic **NVA-style topology** than the single-NIC router used 
 
 This keeps the Azure route tables simple while making the router VM design closer to a real network appliance.
 
+## Related Article
+
+- [Azure Network Segmentation with Terraform](https://foggykitchen.com/2026/04/10/azure-network-segmentation-terraform/)
+
 ## Architecture Overview
 
 ![Dual-NIC NVA architecture](./04_nva_dual_nic_architecture.png)

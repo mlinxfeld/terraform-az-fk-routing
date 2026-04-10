@@ -241,6 +241,12 @@ route_tables = {
 - [terraform-az-fk-storage](https://github.com/mlinxfeld/terraform-az-fk-storage)
 - [terraform-az-fk-aks](https://github.com/mlinxfeld/terraform-az-fk-aks)
 
+## 📰 Related FoggyKitchen Articles
+
+- [Azure Hub-Spoke Routing with Terraform](https://foggykitchen.com/2026/04/07/azure-hub-spoke-routing-terraform/)
+- [Azure Forced Tunneling with Terraform](https://foggykitchen.com/2026/04/09/azure-forced-tunneling-terraform/)
+- [Azure Network Segmentation with Terraform](https://foggykitchen.com/2026/04/10/azure-network-segmentation-terraform/)
+
 ---
 
 ## 🪪 License

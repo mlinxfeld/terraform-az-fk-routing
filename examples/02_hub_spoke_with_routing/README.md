@@ -8,6 +8,10 @@ To make testing possible, the example also deploys **one Linux VM in Spoke1** an
 
 The SSH key pair is generated locally by `tls.tf`, following the same pattern used in [terraform-az-fk-compute](https://github.com/mlinxfeld/terraform-az-fk-compute/blob/main/examples/01_single_vm/tls.tf).
 
+## Related Article
+
+- [Azure Hub-Spoke Routing with Terraform](https://foggykitchen.com/2026/04/07/azure-hub-spoke-routing-terraform/)
+
 ## Architecture Overview
 
 <img src="02_hub_spoke_with_routing_architecture.png" width="900"/>
