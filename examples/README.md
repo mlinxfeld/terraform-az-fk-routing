@@ -15,6 +15,7 @@ These examples are part of the **[FoggyKitchen.com training ecosystem](https://f
 | 02 | **Hub-and-Spoke with Router VM** | Transit routing, UDR, VNet peering, router VM, NSG, [Blog Post](https://foggykitchen.com/2026/04/07/azure-hub-spoke-routing-terraform/) |
 | 03 | **Forced Tunneling via Hub Router VM** | Default route `0.0.0.0/0`, NAT, centralized outbound egress, [Blog Post](https://foggykitchen.com/2026/04/09/azure-forced-tunneling-terraform/) |
 | 04 | **Dual-NIC NVA in Hub** | Multi-NIC router VM, inside/outside split, transit routing, forced tunneling, [Blog Post](https://foggykitchen.com/2026/04/10/azure-network-segmentation-terraform/) |
+| 05 | **Hub-Spoke Private Endpoint Access** | Private Endpoint, Private DNS, cross-spoke access, return UDR, Storage Account |
 
 Each example builds on the **concepts** introduced in the previous one, but can be applied independently for learning and experimentation.
 
@@ -37,9 +38,9 @@ tofu apply
 ```
 
 You can apply examples independently, but the **recommended approach is sequential**:
-01 → 02 → 03 → 04
+01 → 02 → 03 → 04 → 05
 
-This mirrors real-world routing design, where custom routes are introduced first, then transit routing, then centralized outbound egress through forced tunneling, and finally a more realistic dual-NIC NVA-style topology.
+This mirrors real-world routing design, where custom routes are introduced first, then transit routing, then centralized outbound egress through forced tunneling, then a more realistic dual-NIC NVA-style topology, and finally cross-spoke Private Endpoint access routed through the hub.
 
 ---
 
@@ -71,6 +72,8 @@ These examples intentionally avoid:
 - [FoggyKitchen Azure Bastion Module (terraform-az-fk-bastion)](https://github.com/mlinxfeld/terraform-az-fk-bastion)
 - [FoggyKitchen Azure NAT Gateway Module (terraform-az-fk-natgw)](https://github.com/mlinxfeld/terraform-az-fk-natgw)
 - [FoggyKitchen Azure Storage Module (terraform-az-fk-storage)](https://github.com/mlinxfeld/terraform-az-fk-storage)
+- [FoggyKitchen Azure Private Endpoint Module (terraform-az-fk-private-endpoint)](https://github.com/mlinxfeld/terraform-az-fk-private-endpoint)
+- [FoggyKitchen Azure Private DNS Module (terraform-az-fk-private-dns)](https://github.com/mlinxfeld/terraform-az-fk-private-dns)
 - [FoggyKitchen AKS Module (terraform-az-fk-aks)](https://github.com/mlinxfeld/terraform-az-fk-aks)
 
 ---

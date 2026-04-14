@@ -1,6 +1,6 @@
 # terraform-az-fk-routing
 
-This repository contains a reusable **Terraform / OpenTofu module** and progressive examples for deploying **Azure routing resources** — starting from a simple User Defined Route (UDR) and evolving toward hub-and-spoke transit routing, forced tunneling, and dual-NIC NVA patterns.
+This repository contains a reusable **Terraform / OpenTofu module** and progressive examples for deploying **Azure routing resources** — starting from a simple User Defined Route (UDR) and evolving toward hub-and-spoke transit routing, forced tunneling, dual-NIC NVA patterns, and cross-spoke Private Endpoint access.
 
 It is part of the **[FoggyKitchen.com training ecosystem](https://foggykitchen.com/courses/azure-fundamentals-terraform-course/)** and is designed as a **clean, composable routing layer** that builds on top of an existing Azure networking foundation (VNets, subnets, peering, and optional router appliances).
 
@@ -18,6 +18,7 @@ The goal of this module is to provide a **clear, educational, and architecture-a
   - Router VMs and NVAs
   - Hub-and-spoke network topologies
   - Centralized outbound egress designs
+  - Cross-spoke access to Private Endpoints
 
 This is **not** a full landing zone or opinionated platform module.  
 It is a **learning-first, building-block module**.
@@ -38,6 +39,7 @@ Depending on configuration and example used, the module can create:
   - Hub-and-spoke network designs
   - Forced tunneling through a centralized egress point
   - Dual-NIC NVA next-hop patterns
+  - Cross-spoke Private Endpoint access through a hub router
 
 The module intentionally does **not** create:
 - Virtual Networks or subnets
@@ -60,6 +62,7 @@ terraform-az-fk-routing/
 │   ├── 02_hub_spoke_with_routing/
 │   ├── 03_forced_tunneling/
 │   ├── 04_nva_dual_nic/
+│   ├── 05_hub_spoke_private_endpoint_access/
 │   └── README.md
 ├── main.tf
 ├── inputs.tf
@@ -225,6 +228,7 @@ route_tables = {
 - Transit routing is only useful when paired with a real forwarding device
 - Forced tunneling is only useful when paired with a real egress device that can perform NAT
 - Dual-NIC NVA topologies can better model real appliances than single-NIC router labs
+- Private DNS does not replace routing; cross-spoke Private Endpoint access still needs a real transit path
 - Outputs are first-class citizens for composition with other modules
 
 ---
@@ -239,6 +243,8 @@ route_tables = {
 - [terraform-az-fk-bastion](https://github.com/mlinxfeld/terraform-az-fk-bastion)
 - [terraform-az-fk-natgw](https://github.com/mlinxfeld/terraform-az-fk-natgw)
 - [terraform-az-fk-storage](https://github.com/mlinxfeld/terraform-az-fk-storage)
+- [terraform-az-fk-private-endpoint](https://github.com/mlinxfeld/terraform-az-fk-private-endpoint)
+- [terraform-az-fk-private-dns](https://github.com/mlinxfeld/terraform-az-fk-private-dns)
 - [terraform-az-fk-aks](https://github.com/mlinxfeld/terraform-az-fk-aks)
 
 ## 📰 Related FoggyKitchen Articles

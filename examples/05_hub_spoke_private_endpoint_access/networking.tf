@@ -8,13 +8,9 @@ module "vnet_hub" {
   address_space       = ["10.0.0.0/16"]
 
   subnets = {
-    fk-subnet-hub-inside = {
-      name             = "fk-subnet-hub-inside"
+    fk-hub-subnet = {
+      name             = "fk-hub-subnet"
       address_prefixes = ["10.0.1.0/24"]
-    }
-    fk-subnet-hub-outside = {
-      name             = "fk-subnet-hub-outside"
-      address_prefixes = ["10.0.2.0/24"]
     }
   }
 }
@@ -30,8 +26,9 @@ module "vnet_spoke1" {
 
   subnets = {
     fk-subnet-spoke1 = {
-      name             = "fk-subnet-spoke1"
-      address_prefixes = ["10.1.1.0/24"]
+      name                              = "fk-subnet-spoke1"
+      address_prefixes                  = ["10.1.1.0/24"]
+      private_endpoint_network_policies = "Disabled"
     }
   }
 }
@@ -96,13 +93,7 @@ module "routing" {
           name           = "to-spoke2-via-hub"
           address_prefix = "10.2.0.0/16"
           next_hop_type  = "VirtualAppliance"
-          next_hop_ip    = module.router_vm.vm_private_ips["inside"]
-        },
-        {
-          name           = "default-to-internet-via-hub"
-          address_prefix = "0.0.0.0/0"
-          next_hop_type  = "VirtualAppliance"
-          next_hop_ip    = module.router_vm.vm_private_ips["inside"]
+          next_hop_ip    = module.router_vm.vm_private_ip
         }
       ]
 
@@ -119,13 +110,7 @@ module "routing" {
           name           = "to-spoke1-via-hub"
           address_prefix = "10.1.0.0/16"
           next_hop_type  = "VirtualAppliance"
-          next_hop_ip    = module.router_vm.vm_private_ips["inside"]
-        },
-        {
-          name           = "default-to-internet-via-hub"
-          address_prefix = "0.0.0.0/0"
-          next_hop_type  = "VirtualAppliance"
-          next_hop_ip    = module.router_vm.vm_private_ips["inside"]
+          next_hop_ip    = module.router_vm.vm_private_ip
         }
       ]
 

@@ -79,7 +79,7 @@ module "peering_hub_spoke2" {
 
 # Routing module
 module "routing" {
-  source = "../../"
+  source = "github.com/mlinxfeld/terraform-az-fk-routing"
 
   resource_group_name = azurerm_resource_group.fk_rg.name
 

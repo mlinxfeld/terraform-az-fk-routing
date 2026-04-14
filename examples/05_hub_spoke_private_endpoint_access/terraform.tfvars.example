@@ -1,0 +1,7 @@
+location             = "westeurope"
+resource_group_name  = "fk-rg"
+name_prefix          = "fksa"
+router_private_ip    = "10.0.1.4"
+router_vm_size       = "Standard_B1ms"
+spoke_vm_size        = "Standard_B1ms"
+spoke2_vm_private_ip = "10.2.1.4"
