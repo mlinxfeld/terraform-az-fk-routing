@@ -9,7 +9,6 @@ module "vnet_hub" {
 
   subnets = {
     fk-hub-subnet = {
-      name             = "fk-hub-subnet"
       address_prefixes = ["10.0.1.0/24"]
     }
   }
@@ -26,7 +25,6 @@ module "vnet_spoke1" {
 
   subnets = {
     fk-subnet-spoke1 = {
-      name             = "fk-subnet-spoke1"
       address_prefixes = ["10.1.1.0/24"]
     }
   }
@@ -43,7 +41,6 @@ module "vnet_spoke2" {
 
   subnets = {
     fk-subnet-spoke2 = {
-      name             = "fk-subnet-spoke2"
       address_prefixes = ["10.2.1.0/24"]
     }
   }
