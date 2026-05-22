@@ -72,8 +72,8 @@ These examples intentionally avoid:
 - [FoggyKitchen Azure Bastion Module (terraform-az-fk-bastion)](https://github.com/mlinxfeld/terraform-az-fk-bastion)
 - [FoggyKitchen Azure NAT Gateway Module (terraform-az-fk-natgw)](https://github.com/mlinxfeld/terraform-az-fk-natgw)
 - [FoggyKitchen Azure Storage Module (terraform-az-fk-storage)](https://github.com/foggykitchen/terraform-az-fk-storage)
-- [FoggyKitchen Azure Private Endpoint Module (terraform-az-fk-private-endpoint)](https://github.com/mlinxfeld/terraform-az-fk-private-endpoint)
-- [FoggyKitchen Azure Private DNS Module (terraform-az-fk-private-dns)](https://github.com/mlinxfeld/terraform-az-fk-private-dns)
+- [FoggyKitchen Azure Private Endpoint Module (terraform-az-fk-private-endpoint)](https://github.com/foggykitchen/terraform-az-fk-private-endpoint)
+- [FoggyKitchen Azure Private DNS Module (terraform-az-fk-private-dns)](https://github.com/foggykitchen/terraform-az-fk-private-dns)
 - [FoggyKitchen AKS Module (terraform-az-fk-aks)](https://github.com/mlinxfeld/terraform-az-fk-aks)
 
 ---

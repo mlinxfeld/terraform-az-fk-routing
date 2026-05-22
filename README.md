@@ -243,8 +243,8 @@ route_tables = {
 - [terraform-az-fk-bastion](https://github.com/mlinxfeld/terraform-az-fk-bastion)
 - [terraform-az-fk-natgw](https://github.com/mlinxfeld/terraform-az-fk-natgw)
 - [terraform-az-fk-storage](https://github.com/foggykitchen/terraform-az-fk-storage)
-- [terraform-az-fk-private-endpoint](https://github.com/mlinxfeld/terraform-az-fk-private-endpoint)
-- [terraform-az-fk-private-dns](https://github.com/mlinxfeld/terraform-az-fk-private-dns)
+- [terraform-az-fk-private-endpoint](https://github.com/foggykitchen/terraform-az-fk-private-endpoint)
+- [terraform-az-fk-private-dns](https://github.com/foggykitchen/terraform-az-fk-private-dns)
 - [terraform-az-fk-aks](https://github.com/mlinxfeld/terraform-az-fk-aks)
 
 ## 📰 Related FoggyKitchen Articles
