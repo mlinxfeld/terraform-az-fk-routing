@@ -16,7 +16,7 @@ module "vnet" {
 
 # Routing module
 module "routing" {
-  source = "github.com/foggykitchen/terraform-az-fk-routing"
+  source = "github.com/mlinxfeld/terraform-az-fk-routing"
 
   resource_group_name = azurerm_resource_group.fk_rg.name
 

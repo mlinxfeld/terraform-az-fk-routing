@@ -1,6 +1,6 @@
 # Router inside NIC NSG
 module "nsg_router_inside" {
-  source = "github.com/foggykitchen/terraform-az-fk-nsg"
+  source = "github.com/mlinxfeld/terraform-az-fk-nsg"
 
   name                = "fk-nsg-router-inside"
   location            = azurerm_resource_group.fk_rg.location
@@ -36,7 +36,7 @@ module "nsg_router_inside" {
 
 # Router outside NIC NSG
 module "nsg_router_outside" {
-  source = "github.com/foggykitchen/terraform-az-fk-nsg"
+  source = "github.com/mlinxfeld/terraform-az-fk-nsg"
 
   name                = "fk-nsg-router-outside"
   location            = azurerm_resource_group.fk_rg.location

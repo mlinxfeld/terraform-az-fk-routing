@@ -1,5 +1,5 @@
 module "storage" {
-  source = "github.com/foggykitchen/terraform-az-fk-storage"
+  source = "github.com/mlinxfeld/terraform-az-fk-storage"
 
   name                = local.storage_account_name
   resource_group_name = azurerm_resource_group.fk_rg.name

@@ -51,7 +51,7 @@ module "vnet_spoke2" {
 
 # HUB <-> SPOKE 1
 module "peering_hub_spoke1" {
-  source = "github.com/foggykitchen/terraform-az-fk-vnet-peering"
+  source = "github.com/mlinxfeld/terraform-az-fk-vnet-peering"
 
   resource_group_name = azurerm_resource_group.fk_rg.name
 
@@ -65,7 +65,7 @@ module "peering_hub_spoke1" {
 
 # HUB <-> SPOKE 2
 module "peering_hub_spoke2" {
-  source = "github.com/foggykitchen/terraform-az-fk-vnet-peering"
+  source = "github.com/mlinxfeld/terraform-az-fk-vnet-peering"
 
   resource_group_name = azurerm_resource_group.fk_rg.name
 
@@ -79,7 +79,7 @@ module "peering_hub_spoke2" {
 
 # Routing module
 module "routing" {
-  source = "github.com/foggykitchen/terraform-az-fk-routing"
+  source = "github.com/mlinxfeld/terraform-az-fk-routing"
 
   resource_group_name = azurerm_resource_group.fk_rg.name
 
