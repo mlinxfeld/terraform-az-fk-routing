@@ -1,6 +1,6 @@
 # Router VM in Hub
 module "router_vm" {
-  source = "github.com/mlinxfeld/terraform-az-fk-compute"
+  source = "github.com/foggykitchen/terraform-az-fk-compute"
 
   name                = "fk-router-vm"
   location            = azurerm_resource_group.fk_rg.location
@@ -30,7 +30,7 @@ module "router_vm" {
 
 # Test VM in Spoke2
 module "spoke2_vm" {
-  source = "github.com/mlinxfeld/terraform-az-fk-compute"
+  source = "github.com/foggykitchen/terraform-az-fk-compute"
 
   name                = "fk-spoke2-vm"
   location            = azurerm_resource_group.fk_rg.location

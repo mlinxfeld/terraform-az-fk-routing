@@ -1,6 +1,6 @@
 # Router NSG
 module "nsg_router" {
-  source = "github.com/mlinxfeld/terraform-az-fk-nsg"
+  source = "github.com/foggykitchen/terraform-az-fk-nsg"
 
   name                = "fk-nsg-router"
   location            = azurerm_resource_group.fk_rg.location

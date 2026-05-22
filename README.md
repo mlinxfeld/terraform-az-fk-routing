@@ -78,7 +78,7 @@ terraform-az-fk-routing/
 
 ```hcl
 module "routing" {
-  source = "git::https://github.com/mlinxfeld/terraform-az-fk-routing.git?ref=v0.1.0"
+  source = "git::https://github.com/foggykitchen/terraform-az-fk-routing.git?ref=v0.1.0"
 
   resource_group_name = "fk-rg"
 
@@ -108,7 +108,7 @@ The module can also be used in a **hub-and-spoke** design where traffic is forwa
 
 ```hcl
 module "routing" {
-  source = "git::https://github.com/mlinxfeld/terraform-az-fk-routing.git"
+  source = "git::https://github.com/foggykitchen/terraform-az-fk-routing.git"
 
   resource_group_name = "fk-rg"
 
@@ -141,7 +141,7 @@ The module can also be used to force outbound Internet traffic from spoke subnet
 
 ```hcl
 module "routing" {
-  source = "git::https://github.com/mlinxfeld/terraform-az-fk-routing.git"
+  source = "git::https://github.com/foggykitchen/terraform-az-fk-routing.git"
 
   resource_group_name = "fk-rg"
 
@@ -235,17 +235,17 @@ route_tables = {
 
 ## 🧩 Related Modules & Training
 
-- [terraform-az-fk-vnet](https://github.com/mlinxfeld/terraform-az-fk-vnet)
-- [terraform-az-fk-vnet-peering](https://github.com/mlinxfeld/terraform-az-fk-vnet-peering)
-- [terraform-az-fk-nsg](https://github.com/mlinxfeld/terraform-az-fk-nsg)
-- [terraform-az-fk-compute](https://github.com/mlinxfeld/terraform-az-fk-compute)
-- [terraform-az-fk-loadbalancer](https://github.com/mlinxfeld/terraform-az-fk-loadbalancer)
-- [terraform-az-fk-bastion](https://github.com/mlinxfeld/terraform-az-fk-bastion)
-- [terraform-az-fk-natgw](https://github.com/mlinxfeld/terraform-az-fk-natgw)
-- [terraform-az-fk-storage](https://github.com/mlinxfeld/terraform-az-fk-storage)
-- [terraform-az-fk-private-endpoint](https://github.com/mlinxfeld/terraform-az-fk-private-endpoint)
-- [terraform-az-fk-private-dns](https://github.com/mlinxfeld/terraform-az-fk-private-dns)
-- [terraform-az-fk-aks](https://github.com/mlinxfeld/terraform-az-fk-aks)
+- [terraform-az-fk-vnet](https://github.com/foggykitchen/terraform-az-fk-vnet)
+- [terraform-az-fk-vnet-peering](https://github.com/foggykitchen/terraform-az-fk-vnet-peering)
+- [terraform-az-fk-nsg](https://github.com/foggykitchen/terraform-az-fk-nsg)
+- [terraform-az-fk-compute](https://github.com/foggykitchen/terraform-az-fk-compute)
+- [terraform-az-fk-loadbalancer](https://github.com/foggykitchen/terraform-az-fk-loadbalancer)
+- [terraform-az-fk-bastion](https://github.com/foggykitchen/terraform-az-fk-bastion)
+- [terraform-az-fk-natgw](https://github.com/foggykitchen/terraform-az-fk-natgw)
+- [terraform-az-fk-storage](https://github.com/foggykitchen/terraform-az-fk-storage)
+- [terraform-az-fk-private-endpoint](https://github.com/foggykitchen/terraform-az-fk-private-endpoint)
+- [terraform-az-fk-private-dns](https://github.com/foggykitchen/terraform-az-fk-private-dns)
+- [terraform-az-fk-aks](https://github.com/foggykitchen/terraform-az-fk-aks)
 
 ## 📰 Related FoggyKitchen Articles
 
