@@ -70,7 +70,7 @@ These examples intentionally avoid:
 - [FoggyKitchen Azure Compute Module (terraform-az-fk-compute)](https://github.com/foggykitchen/terraform-az-fk-compute)
 - [FoggyKitchen Azure Load Balancer Module (terraform-az-fk-loadbalancer)](https://github.com/foggykitchen/terraform-az-fk-loadbalancer)
 - [FoggyKitchen Azure Bastion Module (terraform-az-fk-bastion)](https://github.com/mlinxfeld/terraform-az-fk-bastion)
-- [FoggyKitchen Azure NAT Gateway Module (terraform-az-fk-natgw)](https://github.com/mlinxfeld/terraform-az-fk-natgw)
+- [FoggyKitchen Azure NAT Gateway Module (terraform-az-fk-natgw)](https://github.com/foggykitchen/terraform-az-fk-natgw)
 - [FoggyKitchen Azure Storage Module (terraform-az-fk-storage)](https://github.com/foggykitchen/terraform-az-fk-storage)
 - [FoggyKitchen Azure Private Endpoint Module (terraform-az-fk-private-endpoint)](https://github.com/foggykitchen/terraform-az-fk-private-endpoint)
 - [FoggyKitchen Azure Private DNS Module (terraform-az-fk-private-dns)](https://github.com/foggykitchen/terraform-az-fk-private-dns)
