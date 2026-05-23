@@ -1,5 +1,5 @@
 module "rbac" {
-  source = "github.com/mlinxfeld/terraform-az-fk-rbac"
+  source = "github.com/foggykitchen/terraform-az-fk-rbac"
 
   scope                = module.storage.storage_account_id
   principal_id         = module.spoke2_vm.vm_principal_id
