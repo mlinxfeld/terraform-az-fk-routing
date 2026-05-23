@@ -229,3 +229,7 @@ Continue your journey:
 ## License
 
 Licensed under the Universal Permissive License (UPL), Version 1.0.
+
+---
+
+© 2026 [FoggyKitchen.com](https://foggykitchen.com) - Cloud. Code. Clarity.

@@ -188,3 +188,7 @@ Use this example when you want to demonstrate that:
 - hub-and-spoke still requires a real transit path
 - UDR on both sides is what makes the cross-spoke flow deterministic
 - managed identity + RBAC can prove real blob access without storage keys
+
+---
+
+© 2026 [FoggyKitchen.com](https://foggykitchen.com) - Cloud. Code. Clarity.
