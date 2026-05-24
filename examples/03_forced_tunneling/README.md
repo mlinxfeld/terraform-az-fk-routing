@@ -8,7 +8,7 @@ To make validation possible, the example also deploys one Linux VM in each spoke
 
 ## Related Article
 
-- [Azure Forced Tunneling with Terraform](https://foggykitchen.com/2026/04/09/azure-forced-tunneling-terraform/)
+- [Azure Forced Tunneling with Terraform — Controlling All Outbound Traffic](https://foggykitchen.com/2026/04/09/azure-forced-tunneling-terraform/)
 
 ## Architecture Overview
 

@@ -10,7 +10,7 @@ The SSH key pair is generated locally by `tls.tf`, following the same pattern us
 
 ## Related Article
 
-- [Azure Hub-Spoke Routing with Terraform](https://foggykitchen.com/2026/04/07/azure-hub-spoke-routing-terraform/)
+- [Azure Hub-and-Spoke Routing with Terraform — Solving Non-Transitive Peering](https://foggykitchen.com/2026/04/07/azure-hub-spoke-routing-terraform/)
 
 ## Architecture Overview
 

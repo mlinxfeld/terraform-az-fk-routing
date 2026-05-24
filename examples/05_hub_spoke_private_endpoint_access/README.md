@@ -7,6 +7,10 @@ The important point is that **Private DNS alone is not enough**. DNS can make `s
 - `Spoke2 -> Hub router VM -> Spoke1 subnet with the Private Endpoint`
 - return traffic from the subnet in `spoke1` back to `Spoke2` must also traverse the hub
 
+## Related Article
+
+- [Extending Azure Hub-and-Spoke Routing with Terraform Modules: Private Endpoint, DNS, and RBAC](https://foggykitchen.com/2026/04/15/azure-hub-spoke-private-endpoint-terraform/)
+
 ## Architecture Overview
 
 ![Architecture](./05_hub_spoke_private_endpoint_access_architecture.png)
