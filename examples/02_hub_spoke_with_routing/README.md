@@ -12,6 +12,8 @@ The SSH key pair is generated locally by `tls.tf`, following the same pattern us
 
 - [Azure Hub-and-Spoke Routing with Terraform — Solving Non-Transitive Peering](https://foggykitchen.com/2026/04/07/azure-hub-spoke-routing-terraform/)
 
+This article explains how User Defined Routes and a hub router VM solve the spoke-to-spoke limitation of plain Azure VNet peering. It maps directly to this example, where the code turns a non-transitive peering layout into a working transit design with reusable modules.
+
 ## Architecture Overview
 
 <img src="02_hub_spoke_with_routing_architecture.png" width="900"/>

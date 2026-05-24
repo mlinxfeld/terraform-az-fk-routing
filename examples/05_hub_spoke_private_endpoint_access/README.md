@@ -11,6 +11,8 @@ The important point is that **Private DNS alone is not enough**. DNS can make `s
 
 - [Extending Azure Hub-and-Spoke Routing with Terraform Modules: Private Endpoint, DNS, and RBAC](https://foggykitchen.com/2026/04/15/azure-hub-spoke-private-endpoint-terraform/)
 
+This article explains why Private DNS by itself does not solve end-to-end connectivity when a Private Endpoint is placed in one spoke and the client lives in another. It gives the architectural background for this example, which combines routing, DNS, Private Endpoint, and RBAC modules into a working hub-and-spoke access path.
+
 ## Architecture Overview
 
 ![Architecture](./05_hub_spoke_private_endpoint_access_architecture.png)

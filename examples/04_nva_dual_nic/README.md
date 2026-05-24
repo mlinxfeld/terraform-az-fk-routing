@@ -13,6 +13,8 @@ This keeps the Azure route tables simple while making the router VM design close
 
 - [Azure Network Segmentation with NVA – Dual NIC Design Explained](https://foggykitchen.com/2026/04/10/azure-network-segmentation-terraform/)
 
+This article explains why a dual-NIC NVA pattern creates a cleaner separation between transit traffic and outbound egress than a single-NIC router design. It provides the design rationale behind this example, where the Terraform/OpenTofu code implements that pattern in a reusable hub-and-spoke topology.
+
 ## Architecture Overview
 
 ![Dual-NIC NVA architecture](./04_nva_dual_nic_architecture.png)

@@ -10,6 +10,8 @@ To make validation possible, the example also deploys one Linux VM in each spoke
 
 - [Azure Forced Tunneling with Terraform — Controlling All Outbound Traffic](https://foggykitchen.com/2026/04/09/azure-forced-tunneling-terraform/)
 
+This article explains why centralized egress matters in hub-and-spoke environments and how default routes change the path of outbound traffic from spoke workloads. It complements this example by walking through the design goal, while the code shows how to implement forced tunneling with reusable routing and compute modules.
+
 ## Architecture Overview
 
 ![Forced tunneling architecture](./03_forced_tunneling_architecture.png)
